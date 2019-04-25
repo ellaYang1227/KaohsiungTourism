@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+body{
+    font-family: 'Microsoft JhengHei';
+}
+
+/*********************************************/
+/* header */
+/*********************************************/
+
+.header-bg{
+    background: url(../images/Hero.png) bottom center no-repeat;
+    background-size: cover;
+    min-height: 380px;
+    position: relative;
+}/* header 背景圖 */
+
+#header h1{
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 3.89px;
+}/* header 標題 */
+
+select#citySelect{
+   /* --火狐、谷歌清除--*/
+   appearance: none;
+   -moz-appearance: none; /* Firefox */
+   -webkit-appearance:  none; /* Safari 和 Chrome */
+   background: url(../images/icons_down.png) 98% center no-repeat;
+   background-color: rgba( 255, 255, 255, .7);
+   border: 3px solid #fff;
+   color: #000;
+   font-weight: 600;
+   font-size: 18px;
+   padding: .5rem .75rem;
+   cursor: pointer;
+}/* select 樣式 */
+
+select#citySelect:focus{
+   box-shadow: none;
+}/* select 樣式 */
+
+#hotLink{
+   background-color: #fff;
+   border-radius: 5px;
+   padding: 25px;
+   box-shadow: 0 1px 3px 0 rgba( 0, 0, 0, .2);
+   margin-top: 50px;
+   margin-bottom: -30px;
+}/* 熱門區域連結 */
+
+#hotLink h6{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}/* 熱門區域連結 標題*/
+
+
+#hotLink .hotLinkGroup{
+    padding: 0 15px;
+    text-align: center;
+}/* 熱門區域連結 按鈕 群組*/
+
+#hotLink .hotLinkGroup .btn{
+    margin: 5px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}/* 熱門區域連結 按鈕*/
+
+@media (max-width: 320px) {
+    #header h1{
+        letter-spacing: 2px;
+        font-size: 32px;
+    }/* header 標題 */
+
+    #hotLink .hotLinkGroup .btn{
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 14px;
+    }/* 熱門區域連結 按鈕*/
+}
+
+@media (min-width: 768px) {
+    #header h1{
+        margin-bottom: 75px;
+    }/* header 標題 */
+    
+    #hotLink{
+        margin-top: 85px;
+        margin-bottom: -90px;
+     }/* 熱門區域連結 */
+
+     #hotLink .hotLinkGroup .btn{
+        padding-left: 30px;
+        padding-right: 30px;
+    }/* 熱門區域連結 按鈕*/ 
+    
+    
+}
+
+@media (min-width: 992px) {
+    #hotLink .hotLinkGroup{
+        text-align: left;
+    }/* 熱門區域連結 按鈕 群組*/
+
+    #hotLink .hotLinkGroup .btn{
+        padding-left: 35px;
+        padding-right: 35px;
+    }/* 熱門區域連結 按鈕*/
+}
+
+
+/*********************************************/
+/* main */
+/*********************************************/
+
+.dividingLine{
+    border-bottom: 1px dashed #559AC8;
+    width: 80%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}/* 分割線 區塊*/
+
+.dividingLine .dividingIcon{
+    width: 24px;
+    height: 24px;
+    margin-bottom: -12px;
+    border-radius: 50%;
+    border: 2px solid #559AC8;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/* 分割線 icon*/
+
+.dividingLine .dividingIcon img{
+    width: 70%;
+}/* 分割線 icon*/
+
+#cityTitle{
+    padding-top: 30px;
+    margin-bottom: 0;
+    color: #8A82CC;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}/* 主標題 */
+
+.attractionsSingle{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}/* 單一 卡片 */
+
+.card{
+    border-radius: 0;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-width: 0;
+}/* 卡片 圖片 外框 */
+
+.cardImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}/* 卡片 圖片 外框 */
+
+.cardImg img{
+    width: 100%;
+}/* 卡片 圖片 */
+
+.attractionsTitle{
+    background: rgba( 0, 0, 0, .3);
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 18px;
+}/* 景點標題 */
+
+.attractionsTitle,
+.attractionsSingle .card-body{
+    padding: 10px 10px;
+} 
+
+.attractionsTitle small{
+    font-size: 66%;
+}/* 景點標題 地區*/
+
+.newsList{
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #000000;
+}/* 景點資訊列表 */
+
+.newsList li{
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+}/* 景點資訊列表 icon*/
+
+.newsList li img{
+    padding-right: 10px;
+}/* 景點資訊列表 icon*/
+
+.newsList li font{
+    margin-left: auto;
+}/* 景點資訊列表 icon*/
+
+#page{
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}/* 頁碼 */
+
+#page ul{
+    margin-bottom: 0;
+}
+
+#page ul li:first-child{
+    margin-right: 15px;
+}
+
+#page ul li:last-child{
+    margin-left: 15px;
+}
+
+#page ul li a{
+    border-width: 0;
+    color: #4A4A4A;
+}/* 頁碼 */
+
+#page ul li.active a{
+    background-color: transparent;
+    color: #559AC8;
+    border-width: 0;
+}/* 頁碼 作用中*/
+
+#page ul li.active a:hover,
+#page ul li.active a:focus{
+    color: #559AC8;
+    cursor: default;
+}/* 頁碼 作用中*/
+
+
+#page ul li a:hover {
+    color: #111;
+    background-color: transparent;
+    border-width: 0;
+}
+
+#page ul li a:focus {
+    box-shadow: none;
+}
+
+#page ul li.disabled a{
+    color: rgba( 73, 73, 73, .5);
+}/* 頁碼 停用*/
+
+#page i{
+    padding-right: 2px;
+    padding-left: 2px;
+}/* 頁碼 icon*/
+
+@media (max-width: 320px) {
+    .newsList{
+        font-size: 12px;
+        line-height: 14px;
+    }/* 景點資訊列表 */
+}
+
+@media (min-width: 768px) {
+    .dividingLine{
+        margin-top: 140px;
+    }/* 分割線 區塊*/
+    
+    #cityTitle{
+        padding-top: 70px;
+        font-size: 36px;
+    }/* 主標題 */
+
+    .attractionsSingle{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }/* 單一 卡片 */
+
+    .attractionsTitle{
+        font-size: 24px;
+    }/* 景點標題 */
+    
+    .attractionsTitle,
+    .attractionsSingle .card-body{
+        padding-left:  20px;
+        padding-right:  20px;
+    } 
+
+    #page{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        font-size: 14px;
+        font-weight: 600;
+    }/* 頁碼 */
+}
+
+@media (min-width: 992px) {
+    .newsList{
+        font-size: 16px;
+        line-height: 18px;
+    }/* 景點資訊列表 */
+}
+
+#goTop{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    animation-duration:2s;
+}
+
+
+
+/*********************************************/
+/* footer */
+/*********************************************/
+
+#footer{
+    background: #559AC8;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #FFD366;
+    font-weight: 600;
+}
+
+#footer h5{
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/*********************************************/
+/* 按鈕 樣式*/
+/*********************************************/
+
+
+.btn:focus{
+    box-shadow: 1px 1px 3px 2px rgba( 0, 0, 0, .2) inset;
+}
+
+.btn-pinkPurple{
+    color: #fff;
+    background-color: #8A82CC;
+    border-color: #8A82CC;
+}/* 粉紫 按鈕*/
+
+.btn-pinkPurple:focus {
+    background-color: #5C5A84;
+    border-color: #5C5A84;
+}/* 粉紫 按鈕*/
+
+.btn-pinkPurple:hover {
+    color: #fff;
+    background-color: #6E6C9E;
+    border-color: #6E6C9E;
+}/* 粉紫 按鈕*/
+
+.btn-pinkOrange{
+    color: #fff;
+    background-color: #FFA782;
+    border-color: #FFA782;
+}/* 粉橘 按鈕*/
+
+.btn-pinkOrange:focus {
+    background-color: #CC846A;
+    border-color: #CC846A;
+}/* 粉橘 按鈕*/
+
+.btn-pinkOrange:hover {
+    color: #fff;
+    background-color: #E59477;
+    border-color: #E59477;
+}/* 粉橘 按鈕*/
+
+.btn-yellow{
+    color: #fff;
+    background-color: #F5D105;
+    border-color: #F5D105;
+}/* 黃 按鈕*/
+
+.btn-yellow:focus {
+    background-color: #C1A106;
+    border-color: #C1A106;
+}/* 黃 按鈕*/
+
+.btn-yellow:hover {
+    color: #fff;
+    background-color: #DBB707;
+    border-color: #DBB707;
+}/* 黃 按鈕*/
+
+.btn-blue{
+    color: #fff;
+    background-color: #559AC8;
+    border-color: #559AC8;
+}/* 藍 按鈕*/
+
+.btn-blue:focus {
+    background-color: #3F7593;
+    border-color: #3F7593;
+}/* 藍 按鈕*/
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: #4B8AAD;
+    border-color: #4B8AAD;
+}/* 藍 按鈕*/
+
+
+
